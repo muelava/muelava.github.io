@@ -99,12 +99,17 @@ function ubah(){
   // scrooll auto show About
   $(window).scroll(function(){
     if(pageYOffset>200){
-      $('#imgAbout,#descAbout').css('transform','translate(0,0)');
-      $('#imgAbout,#descAbout').css('opacity','1');
+      // $('#imgAbout,#descAbout').css('transform','translate(0,0)');
+      $('#imgAbout,#descAbout').css({
+    'opacity':'1',
+    'transform':'translate(0.0)'
+    });
     }else{
       $('#imgAbout').css('transform','translate(-50%,0)');
       $('#descAbout').css('transform','translate(50%,0)');
-      $('#imgAbout,#descAbout').css('opacity','0');
+      $('#imgAbout,#descAbout').css({
+      'opacity':'0'
+    });
     }
   });
 
